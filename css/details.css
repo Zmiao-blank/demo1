@@ -1,0 +1,341 @@
+/*详情页的CSS*/
+.de_container{
+	margin-top:20px;
+}
+.crumb_wrap{
+	height:25px;
+}
+.crumb_wrap a{
+	margin-right:10px;
+}
+/*左盒子设置宽和高*/
+.preview_wrap{
+	width:455px;
+	height:590px;
+}
+.preview_img{
+	position:relative;
+	height:398px;
+	border:1px solid #CCCCCC;
+}
+/*放大镜效果*/
+.mask{
+	display:none;
+	position:absolute;
+	top:0;
+	left:0;
+	width:300px;
+	height:300px;
+	background-color:#FEDE4F;
+	opacity:0.5;
+	border:1px solid #ccc;
+	cursor:move;
+}
+.big{
+	display:none;
+	/*绝对定位将放大镜盒子定位到父盒子preview_img的右边，所写的top和left都是对于父盒子而言的*/
+	position:absolute;
+	left:480px;
+	top:0;
+	width:500px;
+	height:500px;
+	
+	/*z-index用来提高层级*/
+	z-index:999;
+	overflow: hidden;
+}
+.big img {
+	position:absolute;
+	top:0;
+	left:0;
+}
+
+
+.preview_list{
+	height: 60px;
+	margin-top:60px;
+	position:relative;
+}
+.list_item{
+	width:320px;
+	height:60px;
+	/*ul盒子居中对齐*/
+	margin:0 auto;
+}
+.list_item li{
+	float:left;
+	width:56px;
+	height:56px;
+	border:2px solid transparent;
+	margin:0 2px;
+}
+.list_item li.current{
+	border-color:#C81623;
+}
+.arrow_prev,
+.arrow_next{
+	/*a属于行内元素，无大小，转换成定位*/
+	position:absolute;
+	top:15px;
+	width:22px;
+	height:32px;
+}
+.arrow_prev{
+	left:0;
+	background:url(../img/arrow_prev.png) no-repeat;
+}
+.arrow_next{
+	right:0;
+	background:url(../img/arrow_next.png) no-repeat;
+}
+/*右盒子只设置宽度*/
+.intem_info{
+	width:718px;
+}
+.sku_name{
+	/*指这个盒子的高度是30px,文字正对盒子左上角*/
+	height:30px;
+	font-size:16px;
+	font-weight:bold;
+}
+.news{
+	height:32px;
+	color:#E12228;
+}
+
+.summary dl{
+	overflow:hidden;
+}
+.summary dt,
+.summary dd{
+	float:left;
+}
+.summary dt{
+	width:60px;
+	/*没有高度，不能垂直居中*/
+	padding-left: 10px;
+	line-height:36px;
+}
+.summary_price,
+.summary_promotion{
+	/*只给dl盒子的上下，左右距离给dt*/
+	padding:10px 0;
+	background-color: #FEE9EB;
+	position: relative;
+}
+.price{
+	font-size:24px;
+	color:#E12228;
+}
+.summary_price a{
+	color:#c81623;
+}
+.remark{
+	/*不能用右浮动，因为dt盒子只有那么大，右浮动无效，只能通过定位的方式*/
+	position:absolute;
+	right:10px;
+	top:20px;
+}
+.summary_promotion{
+	padding-top:0;
+}
+.summary_promotion dd{
+	/*设置宽度，文字自动换行*/
+	width:450px;
+	line-height:36px;
+}
+.summary_promotion em{
+	display:inline-block;
+	width:40px;
+	height:22px;
+	background-color: #c81623;
+	text-align: center;
+	line-height:22px;
+	color:#FFFFFF
+}
+.summary_support dd{
+	line-height: 36px;
+}
+.choose_color a{
+	/*行内块之间本身存在空隙*/
+	display:inline-block;
+	width:80px;
+	height:41px;
+	background-color: #F7F7F7;
+	border:1px solid #EDEDED;
+	text-align:center;
+	line-height:41px;
+}
+.choose_color a.current{
+	border-color: #C81623;
+}
+.choose_version{
+	margin:10px 0;
+}
+.choose_version a,
+.choose_type a{
+	/*根据a里面的文字自动撑开盒子的宽度*/
+	display:inline-block;
+	height:32px;
+	padding:0 12px;
+	background-color: #F7F7F7;
+	border:1px solid #EDEDED;
+	text-align:center;
+	line-height:32px;
+}
+.choose_version a.current,
+.choose_type a.current{
+	border-color: #C81623;
+}
+.choose_btns{
+	margin-top: 20px;
+}
+.choose_amount{
+	position:relative;
+	float:left;
+	width:50px;
+	height: 46px;
+}
+.addcar{
+	/*链接是行内块元素，没有大小，通过改成内联或者浮动或者定位可以实现大小*/
+	float:left;
+	width:142px;
+	height: 46px;
+	background-color: #C81623;
+	text-align:center;
+	line-height:46px;
+	font-size:18px;
+	color:#FFFFFf;
+	margin-left:10px;
+	font-weight:700;
+}
+.choose_amount input{
+	width:33px;
+	height: 44px;
+	border:1px solid #CCCCCC;
+	text-align:center;
+}
+.add,.reduce{
+	position:absolute;
+	right:0;
+	width:15px;
+	height:22px;
+	border:1px solid #CCCCCC;
+	background-color: #F1F1F1;
+	text-align:center;
+	line-height:22px;
+}
+.add{
+	top:0;	
+}
+.reduce{
+	bottom:0;
+	/*禁止鼠标样式*/
+	/*cursor:not-allowed;*/
+}
+.aside{
+	width:208px;
+	border:1px solid #CCCCCC;
+}
+.tab_list{
+	height: 34px;
+}
+.tab_list li{
+	float:left;
+	background-color: #F1F1F1;
+	border-bottom:1px solid #CCCCCC;
+	height:33px;
+	text-align:center;
+	line-height:33px;
+}
+/*鼠标选择某个li，变化样式*/
+.tab_list .current{
+	background-color: #FFFFFF;
+	border-bottom: 0;
+	color:#C81523;
+}
+.product_detail{
+	margin-bottom: 50px;
+}
+.first_tab{
+	width:103px;
+}
+.second_tab{
+	width:104px;
+	border-left:1px solid #CCCCCC;
+}
+.tab_con{
+	padding:0 30px;
+}
+.tab_con li{
+	border-bottom: 1px solid #CCCCCC;
+}
+.tab_con li h5{
+	/*强制文字只能显示一行,超出的文字省略号显示*/
+	white-space:nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	/*文字不加粗*/
+	font-weight: 400;
+}
+.aside_price{
+	font-weight:700;
+	margin:10px 0;
+}
+.aside_addcar{
+	display: block;
+	width: 88px;
+	height: 26px;
+	border: 1px solid #CCCCCC;
+	background-color: #F7F7F7;
+	margin:10px auto;
+	text-align: center;
+	line-height: 26px;
+}
+
+
+
+.detail{
+	width:978px;
+}
+.detail_tab_list{
+	height:39px;
+	border:1px solid #CCCCCC;
+	background-color: #F1F1F1;
+}
+.detail_tab_list li{
+	float:left;
+	height:39px;
+	line-height:39px;
+	padding:0 20px;
+	text-align: center;
+	cursor: pointer;
+}
+.detail_tab_list .current{
+	background-color: #C81623;
+	color: #FFFFFF;
+}
+.item_info{
+	padding:20px 0 0 20px;
+}
+.item_info li{
+	line-height: 22px;
+}
+.more{
+	float:right;
+	font-weight: 700;
+}
+.item img{
+	padding:15px 300px;
+}
+#pingjia li{
+	width:300px;
+	padding: 5px;
+	background-color: rgb(245,209,243);
+	color:#000000;
+	font-size:14px;
+	margin:15px 0;
+}
+#pingjia li a{
+	float:right;
+}

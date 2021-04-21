@@ -1,0 +1,340 @@
+/*公共样式*/
+/*fl指盒子左浮动，fr指盒子右浮动*/
+.fl{
+	float:left;
+}
+.fr{
+	float:right;
+}
+@font-face{
+				/*font-family字体名称要注意 icomoon*/
+				font-family:'icomoon';
+				/*要注意路径问题  ../是指先从CSS文件夹出来再去找fonts文件夹*/
+				src:url('../fonts/icomoon.eot?7kkyc2');
+				src:url('../fonts/icomoon.eot?7kkyc2#iefix') format('embedded-opentype'),
+				   url('../fonts/icomoon.ttf?7kkyc2') format('truetype'),
+				   url('../fonts/icomoon.woff?7kkyc2') format('woff'),
+				   url('../fonts/icomoon.svg?7kkyc2#icomoon') format('svg');
+				   font-weight:normal;
+				   font-style:normal;
+}
+.fr .icomoon{
+	font-family:'icomoon';
+	font-size:16px;
+	line-height:26px;
+	/*.icomoon是在.shortcut内部，行高=高，盒子居中；行高>高，盒子偏下；行高<高，盒子偏上*/
+}
+/*版心*/
+.w{
+	width:1200px;
+	margin:0 auto;
+}
+.style-red{
+	color:#C81623;
+}
+.spacer{
+	width:1px;
+	height:12px;
+	background-color:#666666;
+	margin:9px 12px 0;
+	/*margin:上 左右 下*/
+}
+/*顶部快捷导航,设置高度、颜色、行高*/
+.shortcut{
+	height:31px;
+	background-color:#F1F1F1;
+	line-height:31px;
+	/*高*/
+}
+.shortcut li{
+	float:left;
+}
+/*header区域*/
+.header{
+	position:relative;
+	height:105px;
+	/*background-color:pink;*/
+}
+.logo{
+	position:absolute;
+	top:25px;
+	left:0;
+	width:90px;
+	height:60px;
+	background-color: purple;
+}
+.logo a{
+	/*a元素为行内元素，如果要设置大小，需要先转化为块元素*/
+	display:block;
+	width:90px;
+	height:60px;
+	background: url(../img/miaologo.jpg) no-repeat;
+	/*首行缩进text-indent;overflow溢出隐藏，指超过div大小的部分给隐藏起来，淘宝做法
+	overflow:hidden;
+	text-indent:-100px;
+	*/
+   /*字号设置为0*/
+    font-size:0;
+}
+.search{
+	position:absolute;
+	top:35px;
+	left:348px;
+}
+.text{
+	float:left;
+	width:445px;
+	height:32px;
+	border:2px solid #B1191A;
+	/*color设置的是value中的颜色，padding-left会撑开盒子原有的width 455，现在改为445px*/
+	color:#CCCCCC;
+	padding-left:10px;
+}
+.btn{
+	float:left;
+	width:82px;
+	height:36px;
+	background-color:#B1191A;
+	border:0;
+	font-size:16px;
+	color:#FFFFFF;
+}
+.hotwords{
+	position:absolute;
+	top:75px;
+	left:348px;
+}
+.hotwords a{
+	/*上下空隙为0，左右空隙为12px，a是行内元素，只能设置左右*/
+	margin:0 12px;
+}
+.shopcar{
+	position:absolute;
+	width:138px;
+	height:34px;
+	border:1px solid #DFDFDF;
+	background-color: #F7F7F7;
+	top:25px;
+	right:64px;
+	/*上面的设置是shopcar这个大盒子的位置*/
+	/*line-height是盒子里面内容的高度，两者相等表示内容居于盒子高度正中间;text-align表示内容居中对齐*/
+	line-height:34px;
+	text-align:center;
+}
+.car{
+	font-family:'icomoon';
+	color:#ED6A5A;
+}
+.arrow{
+	font-family:'icomoon';
+	margin-left:5px;
+}
+
+
+.count{
+	/*加了定位的盒子默认转化为行内块，行内块盒子说明有高度，会继承父盒子的高度34px;
+	只需要给高度，不需要设置宽度，因为数字很大会撑开这个宽度*/
+	position:absolute;
+	top:-5px;
+	/*right是右对齐，若count值为80或800，数字会向左移动，正常数字变大是向右边移动，所以应该是左对齐，固定左边*/
+	/*right:18px;*/
+	left:105px;
+	height:14px;
+	background-color: #E60012;
+	/*里面的count值为8，继承了父盒子的行高34px,需要单独设置行高*/
+	line-height:14px;
+	padding:0 3px;
+	color:#FFFFFF;
+	border-radius:7px 7px 7px 0;
+}
+/*导航nav区域*/
+.nav{
+	height: 45px;
+	border-bottom:2px solid #B1191A;
+}
+.dropdown{
+	width:209px;
+	height:45px;
+}
+.dropdown .dt{
+	/*宽高设置为100%，意思是大小和父盒子dropdown一样*/
+	width:100%;
+	height:100%;
+	background-color:#B1191A;
+	font-size:16px;
+	color:#FFFFFF;
+	text-align:center;
+	line-height:45px;
+}
+.dropdown .dd{
+	width:100%;
+	height:465px;
+	background-color: #C81623;
+	margin-top:2px;
+}
+.dropdown .dt:hover{
+	display:block;
+}
+.menu_item{
+	height:31px;
+	line-height:31px;
+	margin-left:1px;
+	/*如果一个盒子没有宽度，设置padding不会撑大盒子,设置li盒子左右移动*/
+	padding:0 10px;
+	transition:all 0.5s;
+}
+.dropdown .dd .menu_item_now{
+	background-color:#6AAF04;
+}
+.menu_item:hover{
+	padding-left:20px;
+}
+.menu_item:hover{
+	background-color:#FFFFFF;
+}
+/*鼠标经过li，里面的a变颜色*/
+.menu_item:hover a{
+	color:#C81623;
+}
+.menu_item a{
+	font-size:14px;
+	color:#FFFFFF;
+}
+.menu_item i{
+	font-family:'icomoon' ;
+	font-size:18px;
+	color:#FFFFFF;
+	float:right;
+}
+.navitems{
+	margin-left:10px;
+}
+.navitems li{
+	float:left;
+}
+.navitems li a{
+	/*a是行内元素没有大小，先转化为块元素；字数不一样多，不能给宽度!*/
+	display:block;
+	height:45px;
+	line-height:45px;
+	padding:0 25px;
+	font-size:16px;
+}
+
+/*登录样式设置*/
+.divv{
+	position:absolute;
+	display:none;
+	width:250px;
+	height:100px;
+	border:1px solid #000000;
+	background-color: #43CD6E;
+	cursor:move;
+	z-index:9999;
+}
+.xfonts{
+	position:absolute;
+	float:right;
+	font-family:'icomoon';
+	font-size:15px;
+	cursor:pointer;
+	right:-0px;
+	top:-15px;
+}
+.divv label{
+	display:inline-block;
+	width:80px;
+	height:20px;
+	font-size:14px;
+	line-height:20px;
+	text-align:right;
+	margin:9px 0;
+}
+.divv .inputt{
+	width:150px;
+	height:20px;
+	border:1px solid #007FFF;
+}
+.tijiao{
+	width:80px;
+	height:20px;
+	background-color: #7E00FF;
+	border:none;
+	color:#FFFFFf;
+	font-size:14px;
+	margin-bottom:0;
+	margin-left:100px;
+}
+
+
+
+/*底部footer区域*/
+.footer{
+	height:386px;
+	background-color:#F5F5F5;
+	padding-top:30px;
+}
+.mod_service{
+	height:79px;
+	border-bottom:1px solid #CCCCCC;
+}
+.mod_service li{
+	float:left;
+	width:240px;
+	height:79px;
+}
+.mod_service_1{
+	float:left;
+	font-family:'icomoon';
+	font-size:30px;
+	color:#CC3300;
+	margin-left:35px;
+}
+.mod_service_title{
+	float:left;
+	margin-left:5px;
+}
+.mod_service_title h5{
+	margin:5px 0;
+}
+.mod_help{
+	height:187px;
+	border-bottom:1px solid #CCCCCC;
+}
+.mod_help_list{
+	float:left;
+	width:150px;
+	padding:20px 0 0 50px;
+}
+.mod_help_list dt{
+	/*height指dt盒子的大小是25px,font-size指里面的文字大小*/
+	height:25px;
+	font-size:16px;
+}
+.mod_help_list dd{
+	/*height指dd盒子的大小*/
+	height:22px;
+}
+.mod_help_list dt{
+	paadding-left:15px;
+}
+.mod_help_app dt,.mod_help_app p{
+	padding-left:15px;
+}
+.mod_help_app{
+	position:relative;
+}
+.mod_help_app i{
+	position:absolute;
+	bottom:18px;
+	right:35px;
+	font-family:'icomoon';
+	font-size:25px;
+	cursor:pointer;
+}
+.mod_copyright{
+	text-align: center;
+}
+.mod_copyright_links{
+	margin:20px 0 15px 0;
+}

@@ -1,0 +1,15 @@
+//在页面加载完成后再执行JS
+window.addEventListener('load',function(){
+	var preview_img=document.querySelector('.preview_img');
+	var mask=document.querySelector('.mask');
+	var big=document.querySelector('.big');
+	//1.当鼠标经过preview_img，就显示和隐藏  遮挡层mask和大盒子big
+	preview_img.addEventListener('mousemove',function(){
+		mask.style.display='block';
+		big.style.display='block';
+	})
+	preview_img.addEventListener('mouseout',function(){
+		mask.style.display='none';
+		big.style.display='none';
+	})
+})

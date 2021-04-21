@@ -1,0 +1,162 @@
+.maiosha{
+	position:absolute;
+	top:20px;
+	left:140px;
+	height:80px;
+	border-left:1px solid #B1191A;
+}
+.sk_list li{
+	float:left;
+	height:45px;
+	line-height:45px;
+	margin:0 30px;
+}
+.sk_list li a{
+	font-size:16px;
+	color:#000000;
+	font-weight:bold;
+}
+.sk_list li a:hover{
+	color:#C81523;
+}
+.sk_con li{
+	float:left;
+	line-height:45px;
+	margin:0 20px;
+}
+.sk_con li a{
+	font-size:14px;
+	font-weight:bold;
+	font-family: 'icomoon';
+} 
+/*列表页内容区域*/
+.sk_bd{
+	margin-top:25px;
+}
+/*li盒子宽度是1200，父盒子sk_bd宽度是1200，由于设置了右边距12px，导致父盒子一行放不下4个li，这时设置li的父元素ul的宽度大于1200，就能保证一行装下4个li*/
+.sk_bd ul{
+	width:1250px;
+}
+.sk_goods{
+	float:left;
+	position:relative;
+	width:288px;
+	height:430px;
+	border:1px solid transparent;
+	/*每个li之间的距离*/
+	margin-right:12px;
+	margin-bottom:15px;
+}
+.sk_bd .sk_goods_now{
+	border:1px solid #6AAF04;
+}
+.sk_goods:hover{
+	border:1px solid #E12228;
+}
+.sk_goods img{
+	margin:10px 25px;
+}
+.sk_goods_title{
+	font-size:14px;
+	color:#666666;
+	font-weight:normal;
+	padding:5px;
+}
+.sk_goods_price{
+	padding:0 10px;
+}
+.sk_goods_price em{
+	font-size:20px;
+	color:#e60012;
+}
+.sk_goods_price del{
+	font-size:12px;
+	font-weight:bold;
+}
+.sk_goods_progress{
+	padding:15px 10px;
+}
+.bar{
+	/*该盒子的宽和高*/
+	width:130px;
+	height:10px;
+	border:1px solid #b1191a;
+	/*盒子是块元素，自动到第二行，为了和文字保持同一行，需要设置为行内块*/
+	display:inline-block;
+	/*设置行内块与文字垂直居中*/
+	vertial-align:middle;
+	/*设置盒子与左右文字的距离*/
+	margin:0 5px;
+	/*将盒子的直角改成圆弧*/
+	border-radius:5px;
+}
+.bar_in{
+	height:10px;
+	background-color: #f24349;
+	/*若不设置宽度，则默认和父盒子一样的宽度*/
+	width:87%;
+}
+.sk_goods_progress em,
+.sk_goods_progress i{
+	color:#f24349;
+}
+.sk_goods_buy{
+	/*a是块元素，先转化为行内元素;父盒子有左右padding,子盒子要用定位
+	display:block;*/
+	/*若用定位则不需要转化为行内元素，但需要标明盒子的宽度，100%指和父盒子一样宽*/
+	position:absolute;
+	width:100%;
+	/*通过定位，让盒子距离父盒子的下面为0*/
+	bottom:0;
+	height:30px;
+	background-color: #B1191A;
+	color:#FFFFFF;
+	/*文字相对于盒子垂直居中*/
+	text-align:center;
+	/*水平居中*/
+	line-height:30px;
+	/*文字大小*/
+	font-size:15px;
+}
+.page{
+	margin:40px 0;
+	/*没有设置宽度和高度，是通栏，text-align可以对里面的文字，行内块，行内元素水平居中对齐;所以page里面的盒子都是行内块，防止浮动*/
+	text-align:center;
+}
+.page_num a{
+	/*a是行内元素，不能设置大小width和height，如果要设置需要转化为块元素，如果设置为block，所有的a链接向下排列，因此要设置成行内块，每个a链接水平布置，且自带小缝隙*/
+	display:inline-block;
+	width:36px;
+	height:36px;
+	border:1px solid #CCCCCC;
+	background-color: #F7F7F7;
+	/*水平居中已经继承了text-align，只要设置垂直居中即可*/
+	line-height:36px;
+}
+.page_num .pn_prev,
+.page_num .pn_next{
+	width:83px;
+}
+.page_num .current{
+	border:1px solid transparent;
+	background-color:transparent;
+}
+.page_skip input{
+	width:46px;
+	height:36px;
+	/*若不加border，按F12可以看到input的边框是2px;文字居中对齐*/
+	border:1px solid #CCCCCC;
+	text-align:center;
+	transition:all 0.2s;
+}
+/*表单获得焦点后*/
+.page_skip input:focus{
+	width:86px;
+	border:1px solid skyblue;
+}
+.page_skip button{
+	width:54px;
+	height:36px;
+	border:1px solid #CCCCCC;
+	background-color: #F7F7F7;
+}

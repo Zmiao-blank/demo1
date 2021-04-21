@@ -1,0 +1,130 @@
+.w{
+	width:1200px;
+	margin:auto;
+}
+.header{
+	height:82px;
+	border-bottom: 2px solid #B1191A;
+}
+.header img{
+	/*不能用margin???*/
+	padding-top:15px;
+}
+.area{
+	height: 520px;
+	border:1px solid #CCCCCC;
+	margin-top:20px;
+}
+.area h3{
+	height: 40px;
+	border-bottom: 1px solid #CCCCCC;
+	background-color: #ECECEC;
+	line-height: 40px;
+	padding:0 10px;
+	font-weight: 400;
+	font-size:18px;
+}
+.area h3 em{
+	font-size:14px;
+	float:right;
+}
+.area a{
+	color:#C81623;
+}
+.info{
+	width:600px;
+	height:400px;
+	margin:40px auto 0;
+}
+.info label{
+	display: inline-block;
+	width:100px;
+	height:36px;
+	line-height:36px;
+	/*文字右对齐*/
+	text-align:right;
+}
+.info .inp{
+	width:238px;
+	height:34px;
+	border:1px solid #CCCCCC;
+	margin-left: 10px;
+}
+.mes{
+	display:inline-block;
+	color:#1AA5FB;
+	padding-left: 20px;
+	background: url(../img/tishi.jpg) no-repeat left center;
+}
+.dui{
+	color:green;
+	background: url(../img/dui.jpg) no-repeat;
+}
+.cuo{
+	color:#C81623;
+	background: url(../img/cuo.jpg) no-repeat;
+}
+.box{
+	position:relative;
+}
+.box img{
+	position:absolute;
+	top:12px;
+	right:250px;
+	width:20px;
+}
+.icon_2{
+	display:inline-block;
+	width:21px;
+	height:23px;
+	background: url(../img/dui.jpg) no-repeat;
+	vertical-align: middle;
+}
+
+.info li{
+	margin-bottom: 10px;
+}
+.success{
+	color:#40b83f;
+	margin-left: 15px;
+}
+/*
+.safe{
+	padding-left:187px;
+	color:#B2B2B2;
+}
+.safe em{
+	padding:0 12px;
+	color:#CCCCCC;
+}
+.ruo{
+	background-color: #de1111;
+}
+.zhong{
+	background-color: #40b83f;
+}
+.qiang{
+	background-color: #f79100;
+}
+*/
+.agree{
+	padidng-top:20px;
+	padding-left:150px;
+}
+.agree input{
+	/*图标与文字居中对齐*/
+	vertical-align: middle;
+	margin-right: 5px;
+}
+.agree a{
+	color:#1ba1e6;
+}
+.over{
+	width:200px;
+	height:34px;
+	background-color: #C81623;
+	border:none;
+	color:#FFFFFf;
+	font-size:14px;
+	margin:30px 0 0 130px;
+}

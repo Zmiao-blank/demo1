@@ -1,0 +1,55 @@
+@font-face{
+				/*font-family字体名称要注意 icomoon*/
+				font-family:'icomoon';
+				/*要注意路径问题  ../是指先从CSS文件夹出来再去找fonts文件夹*/
+				src:url('../fonts/icomoon.eot?7kkyc2');
+				src:url('../fonts/icomoon.eot?7kkyc2#iefix') format('embedded-opentype'),
+				   url('../fonts/icomoon.ttf?7kkyc2') format('truetype'),
+				   url('../fonts/icomoon.woff?7kkyc2') format('woff'),
+				   url('../fonts/icomoon.svg?7kkyc2#icomoon') format('svg');
+				   font-weight:normal;
+				   font-style:normal;
+}
+.divv{
+	position:fixed;
+	display:none;
+	width:600px;
+	height:250px;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	border:1px solid pink;
+	background-color: #C0C0C0;
+	cursor:move;
+}
+.xfonts{
+	float:right;
+	font-family:'icomoon';
+	font-size:30px;
+	cursor:pointer;
+}
+.divv label{
+	display:inline-block;
+	width:150px;
+	height:40px;
+	font-size:25px;
+	line-height:40px;
+	text-align:right;
+	margin:20px 0;
+}
+.divv .inputt{
+	width:320px;
+	height:38px;
+	border:1px solid #007FFF;
+}
+.tijiao{
+	width:150px;
+	height:34px;
+	background-color: #C81623;
+	border:none;
+	color:#FFFFFf;
+	font-size:20px;
+	margin-bottom:0;
+	margin-top:50px;
+	margin-left:220px;
+}

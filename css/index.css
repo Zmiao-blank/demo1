@@ -1,0 +1,317 @@
+/*该文件为首页样式*/
+.main{
+	width:980px;
+	height:455px;
+	margin-left:219px;
+	margin-top:10px;
+}
+.focus{
+	/*float:left;*/
+	position:relative;
+	width:720px;
+	height:455px;
+	overflow:hidden;
+}
+.focus ul{
+	/*ul宽度是父元素focus宽度720px的五倍*/
+	position:absolute;
+	top:0;
+	left:0;
+	width:500%;
+	background-color: pink;
+}
+.focus ul li{
+	float:left;
+}
+.arrow-l,.arrow-r{
+	display:none;
+	/*a元素是行内元素，无大小，浮动的元素或者加了定位的元素可以设置大小，子绝父相*/
+	position:absolute;
+	/*垂直居中的方式：top=50%;margin-top向上走高度的一半*/
+	top:50%;
+	width:24px;
+	height:40px;
+	background-color: #003EFF;
+	margin-top:-40px;
+	/*半透明写法*/
+	background: rgba(0,0,0,.3);
+	/*里面的内容水平居中*/
+	text-align:center;
+	/*内容垂直居中*/
+	line-height:40px;
+	/*设置内容颜色*/
+	color:#FFFFFF;
+	font-family:'icomoon';
+	font-size:20px;
+	z-index:10;
+}
+.arrow-r{
+	right:0;
+}
+.circle{
+	position:absolute;
+	bottom:15px;
+	left:50px;
+}
+.circle li{
+	float:left;
+	width:8px;
+	height:8px;
+	/*设置小方块的背景色
+	background-color: #FFFFFF;*/
+	/*只设置边框颜色，rgba设置边框为半透明色*/
+	border:1px solid rgba(155,155,155,0.6);
+	/*设置li小方块之间的距离,上下距离为0，左右距离为3px*/
+	margin:0 3px;
+	/*将方块设置为圆圈*/
+	border-radius:50%;
+	/*鼠标经过小圆圈时显示为小手*/
+	cursor:pointer;
+}
+.current{
+	background-color: #FFFFFF;
+}
+.newsflash{
+	/*float:right;*/
+	width:250px;
+	height:455px;
+}
+.news{
+	height:163px;
+	border:1px solid #CCCCCC;
+}
+.news-hd{
+	height:32px;
+	border:1px dotted #CCCCCC;
+	font-size:14px;
+	line-height:32px;
+	padding-left:15px;
+}
+.news-hd a{
+	float:right;
+	padding-left:15px;
+	font-size:12px;
+	font-family:'icomoon';
+}
+.news-bd{
+	padding:10px 0 0 15px;
+}
+.news-bd li{
+	/*height指的是盒子的高度，里面的文字对应到盒子的左上角*/
+	height:23px;
+}
+.lifeservice{
+	/*以div盒子为基础，将每行li超过的部分隐藏，即溢出隐藏*/
+	overflow:hidden;
+	height:208px;
+	border:1px solid #CCCCCC;
+	border-top:none;
+}
+.lifeservice ul{
+	/*父盒子的宽度是250px,li盒子一行放4个，每个宽度为62px,超过了父盒子的宽度(加上盒子边框宽度)，每行最后一个盒子排到第二行
+	，在li上还有个ul盒子，只要保证ul盒子大于li，能装4个但不超过5个即可，因此需要把ul盒子设置大一点，但还有问题是
+	li能放4个了，最后一个盒子右边框超过了盒子，需要把超过的部分隐藏，实现一行放4个li*/
+	width:260px;
+}
+.lifeservice li{
+	position:relative;
+	float:left;
+	width:62px;
+	height:70px;
+	border-right:1px solid #CCCCCC;
+	border-bottom:1px solid #CCCCCC;
+}
+.lifeservice li a{
+	/*将行内元素a设置为块元素，每个li中放了个同等大小盒子的a，width默认和父盒子li一样宽，设置高度为100%，即整个盒子都是a链接*/
+	display:block;
+	/*i设置了距离 上是10px,用溢出隐藏，解决i引起的外边距塌陷合并的问题*/
+	overflow:hidden;
+	height:100%;
+}
+.miaosha{
+	position:absolute;
+	right:0;
+	top:0;
+	width:30px;
+	height:13px;
+	background: url(../img/miaosha.png) no-repeat;
+}
+.service_ico{
+	/*i是行内元素，先转化为块元素，再设置大小*/
+	display:block;
+	width:24px;
+	height:24px;
+	/*实现居中对齐，上下，左右*/
+	margin:10px auto;
+	
+    font-family:'icomoon';
+	font-size:20px;
+	color: #FFC0CB;
+	
+}
+.lifeservice li p{
+	text-align:center;
+}
+.bargin{
+	height:75px;
+	margin-top:5px;
+}
+/*推荐模块*/
+.recommend{
+	height:163px;
+	margin-top: 10px;
+}
+.recommend_hd{
+	float:left;
+	width:200px;
+	height:163px;
+	background-color:#68BAED;
+	text-align:center;
+}
+.recommend_hd img{
+	margin:30px 0 10px 0;
+}
+.recommend_hd span{
+	height:60px;
+	margin-right:8px;
+	color:#6AAF04;
+	line-height:60px;
+	font-size:30px;
+}
+.recommend_bd{
+	float:left;
+	width:1000px;
+	height:163px;
+	background-color:#EBEBEB;
+}
+.recommend_bd ul{
+	height:145px;
+	width:1002px;
+}
+.recommend_bd ul li{
+	/*li盒子的宽度超过了recommend_bd的宽度1000px，需要扩大它的父元素的ul盒子宽度，一行才能放下4个li，
+	否则第四个li会跑到第二行*/
+	float:left;
+	height:145px;
+	width:249px;
+	margin-top:10px;
+}
+.recommend_bd img{
+	margin-left:15px;
+}
+.recommend_bd .last{
+	border-right:none;
+}
+/*floor楼层区*/
+.box-hd{
+	height:30px;
+	background-color: pink;
+	border-bottom: 2px solid #C81623;
+	margin-top:25px;
+}
+.box-bd img{
+	/*过渡写到本身上，谁做隐藏给谁加*/
+	transition:all 0.2s;
+}
+.box-bd img:hover{
+	margin-left:8px;
+}
+.box-bd li{
+	overflow:hidden;
+}
+.box-hd h3{
+	float:left;
+	font-size:18px;
+	color:#C81623;
+}
+.tab-list{
+	float:right;
+	line-height:30px;
+}
+.tab-list li{
+	float:left;
+}
+.tab-list li a{
+	margin:0 15px;
+}
+.box-bd{
+	height:360px;
+}
+.tab-list-1 li{
+	float:left;
+	height:360px;
+}
+.w209{
+	width:209px;
+}
+.w329{
+	position:relative;
+	width:329px;
+	background-color: #CCCCCC;
+}
+.w209-list{
+	/*只有w209-list中的li设置了高度，它的父元素没有设置高度，现在要求li盒子距离下面浮动10px，是实现不了的，父亲没有高，孩子有浮动，设置overflow可以取消浮动*/
+	overflow:hidden;
+	margin-bottom:15px;
+}
+.w209-list li{
+	width:86px;
+	height:32px;
+	line-height:32px;
+	border-bottom:1px solid #CCCCCC;
+	margin-left:10px;
+	/*text-align指水平居中*/
+	text-align:center;
+}
+.w329 .circle-3{
+	position:absolute;
+	bottom:15px;
+	left:150px;
+}
+.circle-3 li{
+	float:left;
+	width:8px;
+	height:8px;
+	border:1px solid rgba(155,155,155,0.6);
+	margin:0 3px;
+	border-radius:50%;
+	cursor:pointer;
+}
+.circle-3 current{
+	background-color: #CCCCCC;
+}
+.w219{
+	width:219px;
+	border-right:1px solid #CCCCCC;
+}
+.w220{
+	width:220px;
+	border-right:1px solid #CCCCCC;
+}
+.tab-item{
+	border-bottom:1px solid #CCCCCC;
+}
+/*电梯导航*/
+.fixedtool{
+	/*将这个容器固定到页面的某一处，滑动页面，该容器位置不受影响*/
+	position:fixed;
+	/*top是基于浏览器的顶部距离,left是在浏览器的中间，与版心正中间并不对应*/
+	top:100px;
+	left:50%;
+	/*将浏览器正中间的盒子，向左移动版心的一半600，此时盒子左边框对应版心的左边框，再继续往左移动盒子的宽度66，刚好盒子右边框对应版心的左边框，再加10px的余量*/
+	margin-left:-676px;
+	width:66px;
+	background-color: #FFFFFF;
+}
+.fixedtool li{
+	height:32px;
+	line-height: 32px;
+	text-align: center;
+	font-size: 12px;
+	border-bottom: 1px solid #CCCCCC;
+	cursor:pointer;
+}
+.fixedtool .current{
+	background-color: #C81623;
+	color:#FFFFFF;
+}

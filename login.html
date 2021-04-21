@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+			<link rel='shortcut icon' href='favicon.ico' type='image/x-icon'>
+			<link rel='stylesheet' href='css/base.css'>
+			<link rel='stylesheet' href='css/login.css'>
+	</head>
+	<body>
+		
+		<a href='#' id='loginlink'>请登录</a>
+		<div class='divv'>
+		<ul>
+			<em class='xfonts'></em>
+			<li>
+				<label for='username'>用户名：</label>
+				<input type='text' value='' id='username' class='inputt' />
+			</li>
+			<li>
+				<label for='mima'>密&emsp;码：</label>
+				<input type='password' value='' id='mima' class='inputt' />
+			</li>
+			<li>
+				<input type='submit' value='登录' class='tijiao'/>
+			</li>
+		</ul>
+		</div>
+	</body>
+	<script>
+		//获取元素
+		var lglink=document.getElementById('loginlink');
+		var closefont=document.getElementsByClassName('xfonts');
+		var divbox=document.getElementsByClassName('divv');
+		//
+		lglink.addEventListener('click',function(){
+			divbox[0].style.display='block';
+		});
+		closefont[0].addEventListener('click',function(){
+			divbox[0].style.display='none';
+		})
+		
+		//拖动模态框：以鼠标移动为基础
+		//鼠标按下mousedown，求得鼠标在盒子内的坐标
+		divbox[0].addEventListener('mousedown',function(e){
+			var ex=e.pageX-divbox[0].offsetLeft;
+			var ey=e.pagey-divbox[0].offsetTop;
+			//鼠标移动，获得新的鼠标在页面中的距离，减去鼠标到盒子的距离，得到盒子距离页面的距离，该事件发生在鼠标按下时
+			document.addEventListener('mousemove',move)
+			function move(e){
+				divbox[0].style.left=e.pageX-ex+'px';
+				divbox[0].style.top=e.pageY-ey+'px';
+			}
+			//鼠标弹起，让鼠标移动事件删除
+			document.addEventListener('mouseup',function(){
+				document.removeEventListener('mousemove',move)
+			});
+			
+		})
+	</script>
+</html>
